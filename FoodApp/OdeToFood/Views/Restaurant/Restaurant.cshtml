@@ -1,0 +1,26 @@
+﻿@model IEnumerable<OdeToFood.Core.Entities.Restaurant>
+@{
+    ViewData["Title"] = "Restaurant";
+}
+
+<h1>Here will be the restaurant list</h1>
+<table>
+   <thead>
+       <tr>
+           <th>Name</th>
+           <th>Location</th>
+           <th>Cuisine</th>
+       </tr>
+   </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Location</td>
+                <td>@item.Cuisine</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
