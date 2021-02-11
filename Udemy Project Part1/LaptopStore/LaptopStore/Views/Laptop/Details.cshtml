@@ -1,0 +1,27 @@
+﻿@model Laptop
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2 class="text-success">Laptop details</h2>
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+       <tr>
+           <th>Id</th>
+           <th>Model Name</th>
+           <th>Company</th>
+           <th>Price</th>
+       </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.ModelName</td>
+            <td>@Model.Company</td>
+            <td>@Model.Price</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<a asp-controller="Laptop" asp-action="Index" class="btn btn-outline-success">Back to Home</a>
+

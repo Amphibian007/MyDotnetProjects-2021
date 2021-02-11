@@ -1,0 +1,33 @@
+﻿@model List<Laptop>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2 class="text-success">List of the laptops</h2>
+<table class="table table-hover">
+    <thead>
+        <tr>          
+            <th scope="col">Id</th>
+            <th scope="col">Model Name</th>
+            <th scope="col">Company</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+               
+                <td>@item.Id</td>
+                <td>@item.ModelName</td>
+                <td>@item.Company</td>
+                <td>@item.Price</td>
+                <td><a class="btn btn-outline-primary" asp-controller="Laptop" asp-action="Details" asp-route-id="@item.Id" >Details</a></td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+<br />
+<a asp-controller="Home" asp-action="Index" class="btn btn-outline-success">Back to Home</a>
+
