@@ -1,0 +1,24 @@
+﻿@model PassionStore.Models.Website
+@{
+    ViewBag.Title = "Product Details";
+}
+
+<h1>Details</h1>
+<table class="table table-hover table-bordered table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>           
+            <td>@Model.Id</td>
+            <td>@Model.Name</td>
+            <td>@Model.Price</td>
+        </tr>
+    </tbody>
+</table>
+<a asp-controller="Home" asp-action="Index" class="btn btn-success">Bact to Home</a>
+
