@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Home Index";
+}
+
+<div class="list-group">
+    <a class="btn btn-outline-info" asp-controller="Sharee" asp-action="Details" asp-route-slug="Sharee-of-the-day">Sharee of the month</a>
+    <br />
+    <a asp-controller="Sharee" asp-action="Index" class="btn btn-outline-info">All Sharees</a>
+    <br />
+    <a asp-action="AboutUs" class="btn btn-outline-info">About Us</a>
+</div>
