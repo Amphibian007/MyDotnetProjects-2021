@@ -1,0 +1,25 @@
+﻿@model FutureValueModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<form asp-action="Index" method="post">
+    <div>
+        <label asp-for="MonthlyInvestment">Enter your monthly investment: </label>
+        <input asp-for="MonthlyInvestment" />
+    </div>
+    <div>
+        <label asp-for="YearlyInterestRate">Your yearly interest rate is: </label>
+        <input asp-for="YearlyInterestRate" />
+    </div>
+    <div>
+        <label asp-for="Years">Enter the number of years: </label>
+        <input asp-for="Years" />
+    </div>
+    <div>
+        <label>Your future revenue is : </label>
+        <label>@ViewBag.futureValue</label>
+    </div>
+    <button type="submit">Enter</button>
+    <a asp-action="Index">Refresh</a>
+</form>
+
