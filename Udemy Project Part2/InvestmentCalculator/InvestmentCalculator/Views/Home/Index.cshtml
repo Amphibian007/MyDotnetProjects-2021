@@ -1,0 +1,50 @@
+﻿@model InvestmentCalculator.Models.InvestmentModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container">
+    <header class="jumbotron">
+        <img id="logo" src="~/images/dipto.jpg" alt="dipto shop image" class="img-responsive" />
+        <h2 class="text-primary mt-3">Future revenue calculator</h2>
+    </header>
+    <main>
+        <div class="alert alert-success alert-dismissible">
+            <button class="close" data-dismiss="alert">&times;</button>
+            This is the best revenue site.
+        </div> 
+        <form asp-action="Index" method="post">
+            <div asp-validation-summary="All"></div>
+            <div class="row">
+                <label asp-for="MonthlyInvestment" class="control-label col-3">Monthly Investment</label>
+                <br />
+                <input asp-for="MonthlyInvestment" class="form-control col-3" />
+            </div>
+            <br />
+
+            <div class="row">
+                <label asp-for="YearlyInterestRate" class="control-label col-3">Yearly interest rate</label>
+                <input asp-for="YearlyInterestRate" class="form-control col-3" />
+            </div>
+            <br />
+
+            <div class="row">
+                <label asp-for="Years" class="control-label col-3">Number of years</label>
+                <input asp-for="Years" class="form-control col-3" />
+            </div>
+            <br />
+
+            <div class="row">
+                <label class="control-label col-3">Your final revenure is :</label>
+                <input value="@ViewBag.futureValue" class="form-control col-3 " readonly />
+            </div>
+            <br />
+
+            <div class="row">
+                <button type="submit" class="btn btn-primary pr-3">Enter</button>
+                <a asp-action="Index" class="btn btn-secondary pr-3">Refresh</a>
+            </div>
+            <br />
+
+        </form>
+    </main>
+</div>
