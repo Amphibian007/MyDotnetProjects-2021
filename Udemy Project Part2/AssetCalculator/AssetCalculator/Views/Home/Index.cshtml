@@ -1,0 +1,51 @@
+﻿@model Asset
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+   <header class="jumbotron">
+       <img src="~/images/Investment.jpg" alt="Another pic" class="img-responsive" />
+       <h2>This is the best asset calculator</h2>
+   </header>
+
+   <main>
+       <div class="alert alert-warning alert-dismissible fade show" role="alert">
+           <strong>Hello Viewers!</strong>This is going to be fun to calculate asset.
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+           </button>
+       </div>
+       <form method="post">
+           <div class="row">
+               <label asp-for="MonthlyAsset" class="control-label col-3"></label>
+               <input asp-for="MonthlyAsset" class="form-control col-3" />
+               <span asp-validation-for="MonthlyAsset" class="text-danger col-3"></span>
+           </div>
+
+           <div class="row">
+               <label asp-for="YearlyInterestRate" class="control-label col-3"></label>
+               <input asp-for="YearlyInterestRate" class="form-control col-3" />
+               <span asp-validation-for="YearlyInterestRate" class="text-danger col-3"></span>
+           </div>
+
+           <div class="row">
+               <label asp-for="Years" class="control-label col-3"></label>
+               <input asp-for="Years" class="form-control col-3" />
+               <span asp-validation-for="Years" class="text-danger col-3"></span>
+           </div>
+
+           <div class="row">
+               <label class="control-label col-3">Your total asset is:</label>
+               <input class="form-control col-3" value="@ViewBag.futureValue" readonly />
+           </div>
+
+           <div class="row">
+               <div class="offset pl-0">
+                   <button type="submit" class="btn btn-outline-success">Enter</button>
+                   <a asp-action="Index" class="btn btn-outline-primary">Refresh</a>
+               </div>
+           </div>
+       </form>
+   </main>
+</div>
