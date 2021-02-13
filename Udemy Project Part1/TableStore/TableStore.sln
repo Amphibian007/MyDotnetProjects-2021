@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableStore", "TableStore\TableStore.csproj", "{3F925EE0-5C38-4E78-BEFD-65B16230E990}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F925EE0-5C38-4E78-BEFD-65B16230E990}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F925EE0-5C38-4E78-BEFD-65B16230E990}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F925EE0-5C38-4E78-BEFD-65B16230E990}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F925EE0-5C38-4E78-BEFD-65B16230E990}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {173DF8F6-5229-444F-A63A-0971395E2304}
+	EndGlobalSection
+EndGlobal

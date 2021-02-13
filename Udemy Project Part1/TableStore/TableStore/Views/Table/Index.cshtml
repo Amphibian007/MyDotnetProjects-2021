@@ -1,0 +1,33 @@
+﻿@model List<Table>
+@{
+    ViewBag.Title = "Table list";
+}
+
+<h2 class="text text-primary">All the tables</h2>
+<br />
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <td class="text-primary">Id</td>
+                <td class="text-primary">Name</td>
+                <td class="text-primary">Category</td>
+                <td class="text-primary">Price</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Category</td>
+                    <td>@item.Price</td>
+                    <td><a asp-action="GetById" asp-controller="Table" asp-route-linkName="@item.LinkName" class="btn btn-outline-success">Details</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+<br />
+<a asp-controller="Home" asp-action="Index" class="btn btn-outline-success">Back to landing page</a>
+

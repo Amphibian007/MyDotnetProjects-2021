@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Landing page";
+}
+<div class="list-group">
+    <a asp-controller="Table" asp-action="GetById" asp-route-linkName="Table-of-the-month" class="btn btn-success text-white">Table of the month</a>
+    <br />
+    <a asp-controller="Table" asp-action="Index" class="btn btn-success text-white">List of all tables</a>
+    <br />
+    <a asp-action="Contact" class="btn btn-success text-white">Contact Us</a>
+</div>
