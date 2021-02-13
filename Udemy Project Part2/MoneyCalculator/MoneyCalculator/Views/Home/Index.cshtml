@@ -1,0 +1,43 @@
+﻿@model InvestmentModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<form method="post">
+    <header class="jumbotron">
+        <img src="~/images/Investment.jpg" alt="Investment" />
+        <h2>This is the investment calculator</h2>
+    </header>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Hello Viewers!</strong> This is the best investment calculator app.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="row">
+        <label asp-for="MonthlyInvestment" class="control-label col-3">Monthly Investment</label>
+        <input asp-for="MonthlyInvestment" class="form-control col-3" />
+        <span asp-validation-for="MonthlyInvestment" class="text-danger col-3"></span>
+    </div>
+    <div class="row">
+        <label asp-for="YearlyInterestRate" class="control-label col-3">Yearly interest rate</label>
+        <input asp-for="YearlyInterestRate" class="form-control col-3" />
+        <span asp-validation-for="YearlyInterestRate" class="text-danger col-3"></span>
+    </div>
+    <div class="row">
+        <label asp-for="Years" class="control-label col-3">Years</label>
+        <input asp-for="Years" class="form-control col-3" />
+        <span asp-validation-for="Years" class="text-danger col-3"></span>
+    </div>
+    <div class="row">
+        <label class="control-label col-3">Your future money is </label>
+        <input readonly value="@ViewBag.futureMoney " class="form-control col-3" />
+    </div>
+    <div class="row">
+        <div class="col offset pl-0">
+            <button type="submit" class="btn btn-outline-success">Enter</button>
+            <a asp-action="Index" class="btn btn-outline-success">Refresh</a>
+
+        </div>
+    </div>
+
+</form>
