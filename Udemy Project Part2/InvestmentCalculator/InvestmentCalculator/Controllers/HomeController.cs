@@ -28,7 +28,7 @@ namespace InvestmentCalculator.Controllers
         {
             if (ModelState.IsValid)
             {
-                ViewBag.futureValue = value.CalculateInvestment();
+                ViewBag.futureValue = value.CalculateInvestment().ToString("c2");
             }
             else
             {

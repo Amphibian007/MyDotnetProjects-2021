@@ -17,14 +17,14 @@ namespace InvestmentCalculator.Models
         [Required(ErrorMessage = "This field is required")]
         [Range(1,5,ErrorMessage ="Year should be from less than 5")]
         public int? Years { get; set; }
-        public decimal? CalculateInvestment()
+        public decimal CalculateInvestment()
         {
-            int? months = Years * 12;
-            decimal? monthlyInterestRate = YearlyInterestRate / 100 / 12;
-            decimal? futureValue = 0;
+            int months = Years.Value * 12;
+            decimal monthlyInterestRate = YearlyInterestRate.Value / 100 / 12;
+            decimal futureValue = 0;
             for(int i = 0; i < months; i++)
             {
-                futureValue = (futureValue + MonthlyInvestment) * (1 + monthlyInterestRate);
+                futureValue = (futureValue + MonthlyInvestment.Value) * (1 + monthlyInterestRate);
             }
             return futureValue;
         }
