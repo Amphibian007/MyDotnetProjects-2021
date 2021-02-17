@@ -1,0 +1,13 @@
+﻿@model Fruit
+@{
+    ViewBag.Title=ViewBag.Action;
+}
+
+<h2>Confirm delete operation</h2>
+
+<h4 class="text-primary">@Model.Name and @Model.Rating </h4>
+<form asp-action="Delete" method="post">
+    <input asp-for="@Model.Id" type="hidden" />
+    <button class="btn btn-outline-danger">Confirm</button>
+    <a asp-action="Index" asp-controller="Home" class="btn btn-outline-primary">Back</a>
+</form>

@@ -1,0 +1,11 @@
+﻿@model Fruit
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2 class="text-primary">Details</h2>
+<h3>Name is @Model.Name</h3>
+<h3>Year is @Model.Year</h3>
+<h3>Rating is @Model.Rating</h3>
+<a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">Back</a>
+
