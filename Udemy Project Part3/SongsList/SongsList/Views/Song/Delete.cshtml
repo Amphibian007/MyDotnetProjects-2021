@@ -1,0 +1,14 @@
+﻿@model Song
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3 class="text-danger">Confirm Delete</h3>
+<p>@Model.Name and @Model.Year</p>
+<form method="post">
+    <input type="hidden" asp-for="@Model.Id" />
+    <button class="btn btn-outline-danger">Delete</button>
+    <button class="btn btn-outline-primary" asp-action="Index" asp-controller="Home" >Cancel</button>
+</form>
+
+
