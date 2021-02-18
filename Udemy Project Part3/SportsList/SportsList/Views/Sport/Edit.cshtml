@@ -1,0 +1,39 @@
+﻿@model Sport
+@{
+    ViewBag.Title = ViewBag.Action;
+}
+
+<h2 class="text-primary">@ViewBag.Action</h2>
+<br />
+<form asp-action="Edit" method="post">
+    <input asp-for="@Model.Id" type="hidden" />
+    <div class="form-group">
+        <label asp-for="@Model.Name">Enter your name</label>
+        <input asp-for="@Model.Name" class="form-control" />
+        <span asp-validation-for="@Model.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Price">Enter price</label>
+        <input asp-for="@Model.Price" class="form-control" />
+        <span asp-validation-for="@Model.Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.TypeId">Enter the type</label>
+        <select asp-for="@Model.TypeId" class="form-control">
+            <option value="">Select the type</option>
+            @foreach (var item in ViewBag.Types)
+            {
+                <option value="@item.TypeId">@item.Name</option>
+            }
+        </select>
+        <span asp-validation-for="@Model.TypeId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Rating">Enter your rating</label>
+        <input asp-for="@Model.Rating" class="form-control" />
+        <span asp-validation-for="@Model.Rating" class="text-danger"></span>
+    </div>
+    <button class="btn btn-outline-success">@ViewBag.Action</button>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">Back</a>
+</form>
+

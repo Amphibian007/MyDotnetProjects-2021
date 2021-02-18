@@ -1,0 +1,13 @@
+﻿@model Sport
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2 class="text-primary">Delete</h2>
+<form asp-action="Delete" method="post">
+    <input asp-for="@Model.Id" type="hidden" />
+    <h4>@Model.Name and @Model.Rating</h4>
+    <button class="btn btn-outline-danger">Confirm</button>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">Cancel</a>
+</form>
+
