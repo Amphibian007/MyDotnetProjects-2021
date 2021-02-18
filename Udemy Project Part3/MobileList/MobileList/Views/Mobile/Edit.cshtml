@@ -1,0 +1,40 @@
+﻿@model Mobile
+@{
+    ViewBag.Title = ViewBag.Action;
+}
+
+<h2 class="text-primary">@ViewBag.Action</h2>
+<br />
+<form asp-action="Edit" method="post">
+    <input asp-for="@Model.Id" type="hidden" />
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="@Model.Name">Enter mobile name</label>
+        <input asp-for="@Model.Name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.Price">Enter mobile price</label>
+        <input asp-for="@Model.Price" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.CompanyId">Enter company</label>
+        <select asp-for="@Model.CompanyId" class="form-control">
+            <option value="">Select company name</option>
+            @foreach(var item in ViewBag.Companies)
+            {
+                <option value="@item.CompanyId">@item.Name</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.Rating">Enter mobile rating</label>
+        <input asp-for="@Model.Rating" class="form-control" />
+    </div>
+
+    <button class="btn btn-outline-success">@ViewBag.Action</button>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">Back</a>
+</form>
+

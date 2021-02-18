@@ -1,0 +1,13 @@
+﻿@model Mobile
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2 class="text-primary">Confirm delete operation</h2>
+<form asp-action="Delete" method="post">
+    <input asp-for="@Model.Id" type="hidden" />
+    <h4 class="text-black-50">@Model.Name, @Model.Price Taka and @Model.Rating Rating</h4>
+    <button class="btn btn-outline-danger">Delete</button>
+    <a asp-action="Index" asp-controller="Home" class="btn btn-outline-primary">Back</a>
+</form>
+
