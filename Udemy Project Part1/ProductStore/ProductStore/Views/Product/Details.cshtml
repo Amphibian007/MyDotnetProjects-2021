@@ -1,0 +1,16 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<table class="table table-striped table-bordered">
+    <tr>
+        <td>Product id is @Model.ProductId</td>
+        <td>Name is @Model.Name</td>
+        <td>Price is @Model.Price</td>
+    </tr>
+</table>
+
+<a asp-action="Index" asp-controller="Home" class="btn btn-outline-primary">Home</a>

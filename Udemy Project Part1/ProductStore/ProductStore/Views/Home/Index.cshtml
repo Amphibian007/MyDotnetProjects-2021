@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="list-group">
+    <a asp-action="Details" asp-controller="Product" asp-route-slug="Product-of-the-month" class="btn btn-primary list-group-item">Product of the month</a>
+    <br />
+    <a asp-action="List" asp-controller="Product"  class="btn btn-primary list-group-item">Product List</a>
+    <br />
+    <a asp-action="ContactUs" asp-controller="Home" a class="btn btn-primary list-group-item">Contact Us</a>
+</div>
