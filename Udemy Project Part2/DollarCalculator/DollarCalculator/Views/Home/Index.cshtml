@@ -1,0 +1,47 @@
+﻿@model DollarModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <header>
+        <div class="jumbotron">
+            <h2>This is the best interest calculaor in the world</h2>
+        </div>
+    </header>
+    <main>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Holy users!</strong> This is the finest interest calculator.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <form method="post">
+            <div class="row">
+                <label asp-for="@Model.MonthlyAsset" class="control-label col-3 ">Enter your monthly asset</label>
+                <input asp-for="@Model.MonthlyAsset" class="form-control col-3" />
+                <span asp-validation-for="@Model.MonthlyAsset" class="text-danger col-3"></span>
+            </div>
+
+            <div class="row">
+                <label asp-for="@Model.YearlyInterestRate" class="control-label col-3 ">Enter your yearly interest rate</label>
+                <input asp-for="@Model.YearlyInterestRate" class="form-control col-3" />
+                <span asp-validation-for="@Model.YearlyInterestRate" class="text-danger col-3"></span>
+            </div>
+
+            <div class="row">
+                <label asp-for="@Model.Years" class="control-label col-3 ">Enter years</label>
+                <input asp-for="@Model.Years" class="form-control col-3" />
+                <span asp-validation-for="@Model.Years" class="text-danger col-3"></span>
+            </div>
+            <div class="row">
+                <label class="control-label col-3 ">Your future asset is :</label>
+                <input value="@ViewBag.FutureDollar" class="form-control col-3" readonly />
+            </div>
+            <div class="row">
+                <button type="submit" class="btn btn-outline-success">Enter</button>
+                <a class="btn btn-outline-primary" asp-action="Index">Refresh</a>
+            </div>
+        </form>
+    </main>
+</div>
