@@ -17,14 +17,31 @@ namespace GeneralCalculator.Controllers
         {
             _logger = logger;
         }
-
+        [HttpGet]
         public IActionResult Index()
         {
+            ViewBag.Result = "";
             return View();
         }
-
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult Index(CalculateModel value)
         {
+            if (ModelState.IsValid)
+            {
+                if (value.Operation == "Sum")
+                    ViewBag.Result = value.Add().ToString();
+                else if (value.Operation == "Subtraction")
+                    ViewBag.Result = value.Sub().ToString();
+                else if (value.Operation == "Multiplication")
+                    ViewBag.Result = value.Mul().ToString();
+                else if (value.Operation == "Divisioin")
+                    ViewBag.Result = value.Div().ToString();
+                
+            }
+            else
+            {
+                ViewBag.Result = "Enter operation correctly";
+            }
             return View();
         }
 

@@ -1,8 +1,42 @@
-﻿@{
+﻿@model CalculateModel
+@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <form method="post">
+        <div class="row">
+            <label asp-for="@Model.Num1" class="control-label col-3">Enter number 1:</label>
+            <input asp-for="@Model.Num1" class="form-control col-3" />
+            <span asp-validation-for="@Model.Num1" class="text text-danger col-3"></span>
+        </div>
+        <br />
+        <div class="row">
+            <label asp-for="@Model.Num2" class="control-label col-3">Enter number 2:</label>
+            <input asp-for="@Model.Num2" class="form-control col-3" />
+            <span asp-validation-for="@Model.Num2" class="text text-danger col-3"></span>
+        </div>
+        <br />
+        <div class="row">
+            <label asp-for="@Model.Operation" class="control-label col-3">Your operation:</label>
+            <select asp-for="@Model.Operation" class="control-label col-3">
+                <option value="">Select an operation</option>
+                <option value="Sum">Sum</option>
+                <option value="Subtraction">Subtraction</option>
+                <option value="Multiplication">Multiplication</option>
+                <option value="Divisioin">Division</option>
+            </select>
+        </div>
+        <br />
+        <div class="row">
+            <label class="control-label col-3">Your operation result is:</label>
+            <input value="@ViewBag.Result" type="submit" class="form-control col-3" readonly/>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <button type="submit" class="btn btn-outline-success">Enter</button>
+            <a asp-action="Index"class="btn btn-outline-primary">Refresh</a>
+        </div>
+    </form>
 </div>
+
