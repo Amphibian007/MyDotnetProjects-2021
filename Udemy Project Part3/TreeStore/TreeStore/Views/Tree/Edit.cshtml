@@ -1,0 +1,33 @@
+﻿@model Tree
+@{
+    ViewBag.Title = ViewBag.Action;
+}
+
+<h1>@ViewBag.Action</h1>
+<div class="container">
+    <form method="post" class="form-group" asp-action="Edit">
+        <div class="row">
+            <label asp-for="@Model.Name" >Enter tree name: </label>
+            <input asp-for="@Model.Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="row">
+            <label asp-for="@Model.Year">Enter year: </label>
+            <input asp-for="@Model.Year" class="form-control" />
+            <span asp-validation-for="Year" class="text-danger"></span>
+        </div>
+        <div class="row">
+            <label asp-for="@Model.Rating" >Enter rating: </label>
+            <input asp-for="@Model.Rating" class="form-control" />
+            <span asp-validation-for="Rating" class="text-danger"></span>
+        </div>
+        <input asp-for="@Model.TreeId" type="hidden" />
+        <br />
+        <div class="row">
+            <button type="submit" class="btn btn-outline-success mr-2">@ViewBag.Action</button>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary mr-3">Home</a>
+        </div>
+
+    </form>
+</div>
+

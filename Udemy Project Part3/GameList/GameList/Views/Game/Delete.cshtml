@@ -1,0 +1,13 @@
+﻿@model Game
+@{ 
+    ViewBag.Title = "Delete";
+}
+<h2 class="text-primary">Confirm delete operation</h2>
+<p> @Model.Name and @Model.Rating</p>
+<form method="post">
+    <input type="hidden" asp-for="@Model.Id" />
+    <button class="btn btn-outline-danger">Delete</button>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">Back</a>
+</form>
+
+

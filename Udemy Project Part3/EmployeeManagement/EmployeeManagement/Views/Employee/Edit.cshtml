@@ -1,0 +1,42 @@
+﻿@model Employee
+@{
+    ViewBag.Title = ViewBag.Action;
+}
+
+<h3 class="text-primary">@ViewBag.Action</h3>
+<br />
+<form method="post" class="form-group" asp-action="Edit">
+    <input asp-for="Id" type="hidden" />
+    <div class="row">
+        <label asp-for="Name">Enter your name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="row">
+        <label asp-for="DepartmentId">Enter your department</label>
+        <select asp-for="DepartmentId" class="form-control">
+            <option value="">Select a department</option>
+            @foreach (var item in ViewBag.Departments)
+            {
+                <option value="@item.DepartmentId">@item.Name</option>
+            }
+        </select>
+        <span asp-validation-for="DepartmentId" class="text-danger"></span>
+    </div>
+    <div class="row">
+        <label asp-for="Salary">Enter your Salary</label>
+        <input asp-for="Salary" class="form-control" />
+        <span asp-validation-for="Salary" class="text-danger"></span>
+    </div>
+    <div class="row">
+        <label asp-for="Experience">Enter your experience</label>
+        <input asp-for="Experience" class="form-control" />
+        <span asp-validation-for="Experience" class="text-danger"></span>
+    </div>
+    <br />
+    <div class="row">
+        <button type="submit" class="btn btn-outline-success mr-2">@ViewBag.Action</button>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">Home</a>
+    </div>
+</form>
+

@@ -1,0 +1,17 @@
+﻿@model Tree
+@{
+    ViewData["Title"] = ViewBag.Action;
+}
+
+<h1>Make sure you want to delete</h1>
+
+<br />
+<form method="post">
+    <input asp-for="@Model.TreeId" type="hidden" />
+    <h3>Name is @Model.Name</h3>
+    <h3>Rating is @Model.Rating</h3>
+    <button type="submit" class="btn btn-outline-primary">Confirm</button>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">Back to home</a>
+
+</form>
+

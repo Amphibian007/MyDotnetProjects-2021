@@ -1,0 +1,34 @@
+﻿@model List<Game>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table table-striped table-bordered">
+
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Year</td>
+            <td>Rating</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Year</td>
+            <td>@item.Rating</td>
+            <td>
+                <a asp-action="Edit" asp-controller="Game" class="btn btn-outline-success" asp-route-id="@item.Id">Edit</a>
+                <a asp-action="Delete" asp-controller="Game" class="btn btn-outline-danger" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+
+</table>
+<br />
+<a asp-action="Create" asp-controller="Game" class="btn btn-outline-primary">Add new game</a>
+
+

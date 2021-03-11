@@ -1,0 +1,38 @@
+﻿@model List<Employee>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <h3 class="text-primary">Here is the list of all employees</h3>
+    <br />
+    <a asp-controller="Employee" asp-action="Create" class="btn btn-outline-success">Create New</a>
+    <br />
+    <br />
+    <table class="table table-bordered table-success">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Department</td>
+                <td>Salary</td>
+                <td>Experience</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Department.Name</td>
+                    <td>@item.Salary</td>
+                    <td>@item.Experience</td>
+                    <td>
+                        <a asp-action="Edit" asp-controller="Employee" class="btn btn-outline-primary" asp-route-id="@item.Id">Edit</a>
+                        <a asp-action="Delete" asp-controller="Employee" class="btn btn-outline-danger" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

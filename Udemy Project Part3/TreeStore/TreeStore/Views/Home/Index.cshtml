@@ -1,0 +1,35 @@
+﻿@model List<Tree>
+@{
+    ViewBag.Title = "Trees Here";
+}
+
+<div class="container">
+    <br />
+    <a asp-action="Create" asp-controller="Tree" class="btn btn-outline-success mr-3">Create New</a>
+    <br />
+    <h2 class="text text-primary">All the list of the trees</h2>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Year</td>
+                <td>Rating</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Year</td>
+                    <td>@item.Rating</td>
+                    <td>
+                        <a asp-controller="Tree" asp-action="Edit" asp-route-id="@item.TreeId" class="btn btn-outline-primary">Edit</a>
+                        <a asp-controller="Tree" asp-action="Delete" asp-route-id="@item.TreeId" class="btn btn-outline-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
