@@ -22,7 +22,7 @@ namespace ProductStore.Controllers
         {
             return View();
         }
-
+        [Route("[action]")]
         public IActionResult ContactUs()
         {
             return View();

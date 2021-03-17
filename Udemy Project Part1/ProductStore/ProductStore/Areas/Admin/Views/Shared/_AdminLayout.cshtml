@@ -1,4 +1,4 @@
-﻿@{ 
+﻿@{
     string controller = ViewContext.RouteData.Values["controller"].ToString();
     string action = ViewContext.RouteData.Values["action"].ToString();
 }
@@ -20,23 +20,23 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-               <nav class="collapse navbar-collapse" id="navbarSupportedContent">
-                   <div class="navbar-nav mr-auto">
-                       <a class="nav-link
+                <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="navbar-nav mr-auto">
+                        <a class="nav-link
                           @(controller=="Home" && action=="Index"?"active":"")"
-                          asp-controller="Home" asp-action="Index">Home</a>
-                       <a class="nav-link
+                           asp-controller="Home" asp-action="Index">Admin</a>
+                        <a class="nav-link
                           @(controller=="Product"?"active":"")"
-                          asp-controller="Product" asp-action="List">Products</a>
-                       <a class="nav-link
-                          @(controller=="Home" && action=="ContactUs"?"active":"")"
-                          asp-controller="Home" asp-action="ContactUs">Contact Us</a>
-                   </div>
-                   <div class="navbar-nav navbar-right">
-                       <a class="nav-link" 
-                          asp-area="Admin" asp-controller="Home" asp-action="Index">Admin</a>
-                   </div>
-               </nav>
+                           asp-controller="Product" asp-action="List">Products</a>
+                        <a class="nav-link
+                          @(controller=="Category"?"active":"")"
+                           asp-controller="Category" asp-action="List">Categories</a>
+                    </div>
+                    <div class="navbar-nav navbar-right">
+                        <a class="nav-link"
+                           asp-area="" asp-controller="Home" asp-action="Index">Shopping</a>
+                    </div>
+                </nav>
             </div>
         </nav>
     </header>

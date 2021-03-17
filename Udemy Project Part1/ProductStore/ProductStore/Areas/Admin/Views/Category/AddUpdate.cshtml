@@ -1,0 +1,16 @@
+﻿@model Category
+@{ 
+    string title = ViewBag.Action + " category";
+    ViewBag.Title = title;
+}
+<h1>@ViewBag.Title</h1>
+<form asp-action="Update" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <input asp-for="CategoryID" type="hidden" />
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-outline-primary">@ViewBag.Action</button>
+    <a asp-action="List" asp-controller="Category" class="btn btn-outline-info">Back</a>
+</form>

@@ -5,12 +5,30 @@
 
 <h1>Details</h1>
 
-<table class="table table-striped table-bordered">
-    <tr>
-        <td>Product id is @Model.ProductId</td>
-        <td>Name is @Model.Name</td>
-        <td>Price is @Model.Price</td>
-    </tr>
-</table>
+<div class="row">
+    <div class="col-sm-4">
+        <img src="~/Images/@ViewBag.ImageFileName" alt="@Model.Name" class="img-resposive center-block" />
+    </div>
+    <div class=" col-sm-8">
+        <h2>@Model.Name</h2>
+        <h4>Category: @Model.Category.Name</h4>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td>List price:</td>
+                <td>@Model.Price.ToString("C")</td>
+            </tr>
+            <tr>
+                <td>Discount Percent:</td>
+                <td>@Model.DiscountPercent.ToString("P0")</td>
+            </tr>
+            <tr>
+                <td>Discount Price:</td>
+                <td>@Model.DiscountPrice.ToString("C")
+                (You saved @Model.DiscountAmount.ToString("C"))
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
 
 <a asp-action="Index" asp-controller="Home" class="btn btn-outline-primary">Home</a>

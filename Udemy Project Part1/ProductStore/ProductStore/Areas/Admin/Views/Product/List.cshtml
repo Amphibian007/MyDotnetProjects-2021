@@ -1,11 +1,11 @@
 ﻿@model ProductListViewModel
 @{
-    ViewData["Title"] = "List";
+    ViewData["Title"] = "Product Manager";
 }
 
-<h1>List of all products</h1>
+<h1>@ViewBag.Title</h1>
 <div class="row">
-    <div class="col-sm-2">      
+    <div class="col-sm-2">
         <div class="list-group">
             <a asp-controller="Product" asp-action="Index" asp-route-id="All" class="list-group-item
                @Model.CheckActiveCategory("All")">All</a>
@@ -14,37 +14,45 @@
                 <a asp-controller="Product" asp-action="List" asp-route-id="@item.Name" class="list-group-item
                     @Model.CheckActiveCategory(item.Name)">@item.Name</a>
                 }
-            <a asp-controller="Product" asp-action="List" asp-route-id="Specials" class="list-group-item
-               @Model.CheckActiveCategory("Specials")">Special Deals</a>
         </div>
     </div>
     <div class="col-sm-10">
         <table class="table table-bordered table-striped">
             <thead>
-               <tr>
-                   <th>Name</th>
-                   <th>Price</th>
-                   <th></th>
-                   <th></th>
-               </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th></th>
+                    <th></th>
+                </tr>
             </thead>
             <tbody>
-                @foreach(var product in Model.Products)
+                @foreach (var product in Model.Products)
                 {
                     <tr>
                         <td>@product.Name</td>
                         <td>@product.Price</td>
                         <td>
-                            <a asp-controller="Product" asp-action="Details" asp-route-id="@product.ProductID"
-                               asp-route-slug="@product.Slug" class="btn btn-outline-success">Details</a>
+                            <a asp-controller="Product" asp-action="Update" asp-route-id="@product.ProductID"
+                                class="btn btn-outline-success">Update</a>
                         </td>
                         <td>
-                            <a asp-controller="Cart" asp-action="Add" asp-route-id="@product.Slug" class="btn btn-outline-primary">Add to Cart</a>
+                            <a asp-controller="Product" asp-action="Delete" asp-route-id="@product.ProductID" class="btn btn-outline-primary">Delete</a>
                         </td>
                     </tr>
                 }
             </tbody>
         </table>
+        @{ 
+            string userMessage=TempData?["UserMessage"]?.ToString()??"";
+        }
+        @{ 
+            if (userMessage != "")
+            {
+                <div class="text-success">@userMessage</div>
+            }
+        }
+        <a asp-action="Add" asp-controller="Product" class="btn btn-outline-success">Add new product</a>
     </div>
 
 </div>
