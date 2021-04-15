@@ -1,0 +1,48 @@
+2021-04-14 21:20:55.224 +06:00 [INF] Information is starting
+2021-04-14 21:21:57.250 +06:00 [INF] Application is starting
+2021-04-14 21:21:59.117 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-14 21:21:59.122 +06:00 [INF] Hosting environment: Development
+2021-04-14 21:21:59.124 +06:00 [INF] Content root path: G:\MyDotnetProjects-2021\HotelListing\HotelListing
+2021-04-14 21:21:59.169 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44324/swagger/index.html - -
+2021-04-14 21:21:59.807 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44324/swagger/index.html - - - 200 - text/html;charset=utf-8 642.7364ms
+2021-04-14 21:22:00.328 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44324/swagger/v1/swagger.json - -
+2021-04-14 21:22:00.547 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44324/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 218.9791ms
+2021-04-14 21:23:09.740 +06:00 [INF] Application is starting
+2021-04-14 21:23:11.960 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-14 21:23:11.964 +06:00 [INF] Hosting environment: Development
+2021-04-14 21:23:11.966 +06:00 [INF] Content root path: G:\MyDotnetProjects-2021\HotelListing\HotelListing
+2021-04-14 21:23:11.994 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44324/swagger/index.html - -
+2021-04-14 21:23:12.172 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44324/swagger/index.html - - - 200 - text/html;charset=utf-8 177.7571ms
+2021-04-14 21:23:12.437 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44324/swagger/v1/swagger.json - -
+2021-04-14 21:23:12.598 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44324/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 161.1219ms
+2021-04-14 21:45:32.740 +06:00 [INF] Application is starting
+2021-04-14 21:45:34.713 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-14 21:45:34.719 +06:00 [INF] Hosting environment: Development
+2021-04-14 21:45:34.722 +06:00 [INF] Content root path: G:\MyDotnetProjects-2021\HotelListing\HotelListing
+2021-04-14 21:45:34.907 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44324/swagger/index.html - -
+2021-04-14 21:45:35.327 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44324/swagger/index.html - - - 200 - text/html;charset=utf-8 465.2962ms
+2021-04-14 21:45:35.870 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44324/swagger/v1/swagger.json - -
+2021-04-14 21:45:36.223 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44324/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 353.2027ms
+2021-04-14 21:49:57.463 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44324/WeatherForecast - -
+2021-04-14 21:49:57.508 +06:00 [INF] Executing endpoint 'HotelListing.Controllers.WeatherForecastController.Get (HotelListing)'
+2021-04-14 21:49:57.541 +06:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[HotelListing.WeatherForecast] Get() on controller HotelListing.Controllers.WeatherForecastController (HotelListing).
+2021-04-14 21:49:57.554 +06:00 [INF] Executing ObjectResult, writing value of type 'HotelListing.WeatherForecast[]'.
+2021-04-14 21:49:57.576 +06:00 [INF] Executed action HotelListing.Controllers.WeatherForecastController.Get (HotelListing) in 28.2308ms
+2021-04-14 21:49:57.577 +06:00 [INF] Executed endpoint 'HotelListing.Controllers.WeatherForecastController.Get (HotelListing)'
+2021-04-14 21:49:57.577 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44324/WeatherForecast - - - 200 - application/json;+charset=utf-8 115.8622ms
+2021-04-14 21:54:26.418 +06:00 [INF] Application is starting
+2021-04-14 21:54:27.896 +06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-14 21:54:27.901 +06:00 [INF] Hosting environment: Development
+2021-04-14 21:54:27.903 +06:00 [INF] Content root path: G:\MyDotnetProjects-2021\HotelListing\HotelListing
+2021-04-14 21:54:27.928 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44324/swagger/index.html - -
+2021-04-14 21:54:28.189 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44324/swagger/index.html - - - 200 - text/html;charset=utf-8 264.8784ms
+2021-04-14 21:54:28.555 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44324/swagger/v1/swagger.json - -
+2021-04-14 21:54:28.714 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44324/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 158.9735ms
+2021-04-14 21:54:39.000 +06:00 [INF] Request starting HTTP/2 GET https://localhost:44324/WeatherForecast - -
+2021-04-14 21:54:39.044 +06:00 [INF] Executing endpoint 'HotelListing.Controllers.WeatherForecastController.Get (HotelListing)'
+2021-04-14 21:54:39.080 +06:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[HotelListing.WeatherForecast] Get() on controller HotelListing.Controllers.WeatherForecastController (HotelListing).
+2021-04-14 21:54:39.084 +06:00 [INF] Weather api accessed
+2021-04-14 21:54:39.095 +06:00 [INF] Executing ObjectResult, writing value of type 'HotelListing.WeatherForecast[]'.
+2021-04-14 21:54:39.125 +06:00 [INF] Executed action HotelListing.Controllers.WeatherForecastController.Get (HotelListing) in 35.4868ms
+2021-04-14 21:54:39.128 +06:00 [INF] Executed endpoint 'HotelListing.Controllers.WeatherForecastController.Get (HotelListing)'
+2021-04-14 21:54:39.128 +06:00 [INF] Request finished HTTP/2 GET https://localhost:44324/WeatherForecast - - - 200 - application/json;+charset=utf-8 128.6216ms
